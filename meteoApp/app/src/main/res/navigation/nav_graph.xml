@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListFragment">
+
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="fr.uavignon.ceri.tp3.ListFragment"
+        android:label="List Fragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_ListFragment_to_DetailFragment"
+            app:destination="@id/DetailFragment" />
+        <action
+            android:id="@+id/action_ListFragment_to_NewCityFragment"
+            app:destination="@id/NewCityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailFragment"
+        android:name="fr.uavignon.ceri.tp3.DetailFragment"
+        android:label="Detail Fragment"
+        tools:layout="@layout/fragment_detail">
+
+        <action
+            android:id="@+id/action_DetailFragment_to_ListFragment"
+            app:destination="@id/ListFragment" />
+        <argument
+            android:name="city_num"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/NewCityFragment"
+        android:name="fr.uavignon.ceri.tp3.NewCityFragment"
+        android:label="Add City Fragment"
+        tools:layout="@layout/fragment_add">
+
+        <action
+            android:id="@+id/action_NewCityFragment_to_ListFragment"
+            app:destination="@id/ListFragment" />
+        <argument
+            android:name="city_num"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+</navigation>
