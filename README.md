@@ -1,4 +1,4 @@
-# TP3 Android: Application Météo
+# Application Météo
 
 ## Auteur
 - **Nom et Prénom**: BOUDOUNT Youssef
